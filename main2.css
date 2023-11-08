@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding-bottom: 3rem;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+  background-color: hsl(235, 18%, 26%);
+}
+
+.success {
+  background-color: white;
+  max-width: 35rem;
+  padding: 2.7rem;
+  border-radius: 20px;
+}
+.success__icon {
+  height: 5rem;
+  margin-bottom: 2rem;
+}
+.success__heading {
+  color: hsl(234, 29%, 20%);
+  font-size: 3.7rem;
+  font-weight: 700;
+  max-width: 10ch;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+.success__description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+.success__confirm {
+  font-family: inherit;
+  text-align: center;
+  width: 100%;
+  padding-block: 1.3rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  outline: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  background-color: hsl(234, 29%, 20%);
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+.success__confirm::before {
+  content: " ";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(to right, rgba(245, 28, 64, 0.8), rgba(253, 96, 57, 0.9882352941));
+  opacity: 0;
+  z-index: -1;
+}
+@media only screen and (hover: hover) {
+  .success .success__confirm:hover::before {
+    opacity: 1;
+  }
+  .success .success__confirm:hover {
+    background-color: transparent;
+  }
+}
+.success__email {
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 21.875em) {
+  body {
+    display: block;
+    padding: 0;
+  }
+  .success {
+    height: 100%;
+    width: 100%;
+    padding-top: 40%;
+  }
+  .success__icon {
+    margin-bottom: 4rem;
+  }
+  .success__confirm {
+    position: absolute;
+    max-width: 20rem;
+    bottom: 2rem;
+  }
+}/*# sourceMappingURL=main2.css.map */

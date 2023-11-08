@@ -1,0 +1,11 @@
+@use '../abstract/variables' as *;
+
+.sign-up {
+    &__description {
+        font-size: 1.6rem;
+        font-weight: $fw-400;
+        margin-inline: 1.7rem;
+        color:$Charcoal-Grey;
+        margin-bottom: 2.5rem;
+    }
+}

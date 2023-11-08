@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="main.css" id="link">
+  <title>Sign up</title>
+
+
+</head>
+<body>
+   <div class="sign-up" id="s">
+    <div class="sign-up__right-desktop">
+    <picture>
+      <source media="(max-width:48em)" srcset="assets/images/illustration-sign-up-mobile.svg">
+     <source media="(min-width:48em)" srcset="assets/images/illustration-sign-up-desktop.svg" > 
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="illustration" class="sign-up__illustration">
+    </picture> 
+    
+    </div>
+
+    <div class="sign-up__left-desktop">
+       <h1 class="sign-up__heading">Stay updated!</h1>
+       <p class="sign-up__description">
+        Join 60,000+ product managers receiving monthly updates on:
+       </p>
+ 
+       <ul class="sign-up__updates">
+        <li class="sign-up__item">
+          <img src="assets/images/icon-list.svg" alt="icon-list">
+          <p class="sign-up__update">
+            Product discovery and building what matters
+          </p>
+        </li>
+        <li class="sign-up__item">
+          <img src="assets/images/icon-list.svg" alt="icon-list">
+          <p class="sign-up__update">
+            Measuring to ensure updates are a success
+          </p>
+        </li>
+        <li class="sign-up__item">
+          <img src="assets/images/icon-list.svg" alt="icon-list">
+          <p class="sign-up__update">
+             And much more!
+          </p>
+        </li>
+       </ul>
+       <form action="" class="sign-up__form" id="form">
+        <div style="display: flex; justify-content: space-between">
+        <label for="email" class="sign-up__label">Email adress</label>
+        <p class="validate" style="display: none;" id="invalid">Valid email required</p>
+       </div>
+        <input type="email" class="sign-up__email" placeholder="email@company.com" id="email">
+        <button type="submit" class="sign-up__button">
+          Subscribe to monthly newsletter
+        </button>
+       </form>
+      </div>
+   </div>
+
+
+
+   <div class="success" style="display: none;" id="d">
+    <img src="assets/images/icon-success.svg" alt="success" class="success__icon">
+    <h1 class="success__heading">
+        Thanks for subscribing!
+    </h1>
+    <p class="success__description">
+        A confirmation email has been sent to <span class="success__email">
+            ash@loremcompany.com.
+        </span>
+        Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button class="success__confirm" id="dimiss">
+        Dimiss message
+    </button>
+</div>
+
+
+   <script src="script.js"></script>
+</body>
+</html>

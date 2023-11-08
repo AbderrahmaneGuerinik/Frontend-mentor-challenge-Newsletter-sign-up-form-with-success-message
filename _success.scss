@@ -1,0 +1,101 @@
+@use 'abstract/variables' as *;
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     height: 100svh;
+    background-color: $Charcoal-Grey;
+}
+
+.success {
+    background-color: white;
+    max-width: 35rem;
+    padding: 2.7rem;
+    border-radius: 20px;
+
+    &__icon {
+        height: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__heading {
+        color: $Dark-Slate-Grey;
+        font-size: 3.7rem;
+        font-weight: $fw-700;
+        max-width: 10ch;
+        line-height: 1;
+        margin-bottom: 2rem;
+    }
+
+    &__description {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: $Dark-Slate-Grey;
+        margin-bottom: 3rem;
+        font-weight: 300;
+    }
+
+    &__confirm {
+        font-family: inherit;
+        text-align: center;
+        width: 100%;
+        padding-block: 1.3rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        outline: none;
+        color: white;
+        font-weight: $fw-700;
+        font-size: 1.2rem;
+        border: none;
+        cursor: pointer;
+        background-color: $Dark-Slate-Grey;
+        position: relative;
+        z-index: 1;
+        transition: background-color .3s;
+        &::before {
+            content: ' ';
+            position: absolute;
+            inset: 0;
+            border-radius: 10px;
+            background: linear-gradient(to right,rgba(245, 28, 64,.8) ,#fd6039fc  ); 
+            opacity: 0;
+            z-index: -1;
+        }
+      
+    }
+
+    @media only screen and  (hover:hover) {
+        .success__confirm:hover::before {
+            opacity: 1;
+        }
+        .success__confirm:hover {
+            background-color: transparent;
+        }
+    }
+    &__email {
+        font-weight: $fw-700;
+    }
+}
+
+@media only screen and (max-width: 21.875em) {
+    body {
+        display: block;
+        padding: 0;
+    }
+    .success {
+        height: 100%;
+        width: 100%;
+        padding-top: 40%;
+        &__icon {
+            margin-bottom: 4rem;
+        }
+        &__confirm {
+            position: absolute;
+            max-width: 20rem;
+            bottom: 2rem;
+        }
+    }
+}
+
+ 

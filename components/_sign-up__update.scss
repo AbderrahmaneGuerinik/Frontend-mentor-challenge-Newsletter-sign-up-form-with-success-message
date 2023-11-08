@@ -1,0 +1,17 @@
+@use '../abstract/variables' as *;
+
+.sign-up {
+ 
+    &__updates {
+        list-style: none;
+        margin-inline: 1.7rem;
+        margin-bottom: 3.8rem;
+    }
+    &__update {
+        font-size: 1.6rem;
+        font-weight: $fw-400;
+        color: $Dark-Slate-Grey;
+        display: inline-block;
+       margin-left: 2rem;
+    }
+}

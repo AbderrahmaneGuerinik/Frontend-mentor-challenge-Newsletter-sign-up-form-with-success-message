@@ -1,0 +1,11 @@
+@use '../abstract/variables' as *;
+
+.sign-up {
+    &__heading {
+        font-size: 3rem;
+        font-weight: $fw-700;
+        color: $Dark-Slate-Grey;
+        margin-inline: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+}

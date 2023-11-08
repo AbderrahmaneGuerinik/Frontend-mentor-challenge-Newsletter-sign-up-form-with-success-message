@@ -1,0 +1,64 @@
+@use '../abstract/variables' as *;
+@mixin min($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@include min(28.125em) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@include min(40.625em) {
+    html {
+        font-size: 85%;
+    }
+}
+
+@include min(48em) {
+    html {
+        font-size: 62.5%;
+        padding-top: 2rem;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 6rem 0 5rem 0;
+        background-color: $Dark-Slate-Grey;
+    }
+    .sign-up {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 550px;
+        width: 90%;
+        background-color: white;
+        border-radius: 30px;
+        &__illustration {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            max-height: none;
+            margin-bottom: 0;
+        }
+      &__right-desktop {
+        padding: 2rem;
+        width: 50%;
+      }
+      &__left-desktop {
+        padding: 7rem 2rem 0 3rem;
+        width: 50%;
+      }
+      &__heading {
+        font-size: 4rem;
+      }
+      &__description {
+        line-height: 1.5;
+         
+      }
+    }
+ 
+}
